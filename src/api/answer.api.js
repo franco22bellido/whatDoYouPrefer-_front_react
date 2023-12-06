@@ -2,7 +2,7 @@ import axios from "axios"
 
 export const answerSurvey = async (id, optionSelected)=> {
     try {
-        return await axios.post(`http://localhost:3000/answer/${id}`, {
+        return await axios.post(`https://higherorlower-whatdoyouprefer.onrender.com/answer/${id}`, {
             optionSelected
         });
     } catch (error) {
@@ -11,7 +11,7 @@ export const answerSurvey = async (id, optionSelected)=> {
 }
 export const countVotes = async (surveyId)=> {
     try {
-        return await axios.get(`http://localhost:3000/answer/${surveyId}`);
+        return await axios.get(`https://higherorlower-whatdoyouprefer.onrender.com/answer/${surveyId}`);
     } catch (error) {
         console.log(error);
     }
