@@ -1,4 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
+import YouLose from './components/YouLose'
 import Principal from "./components/Principal"
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/home" Component={Principal}></Route>
+        <Route path="/you-lose/:score" Component={YouLose}></Route>
       </Routes>
     </BrowserRouter>  
   )
